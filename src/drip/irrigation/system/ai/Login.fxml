@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="rootAnchor" onMouseEntered="#handleTextAnimation" prefHeight="635.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="drip.irrigation.system.ai.LoginController">
+   <children>
+      <Pane id="pane" layoutX="138.0" layoutY="8.0" prefHeight="635.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="logPane" layoutX="576.0" layoutY="160.0" prefHeight="316.0" prefWidth="245.0">
+               <children>
+                  <JFXTextField fx:id="username" alignment="BOTTOM_LEFT" focusColor="#2b55a8" layoutX="31.0" layoutY="38.0" prefHeight="44.0" prefWidth="170.0" promptText="Фойдаланувчи" unFocusColor="#3d6b32">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXPasswordField fx:id="password" focusColor="#235797" layoutX="36.0" layoutY="107.0" prefHeight="44.0" prefWidth="170.0" promptText="Парол" unFocusColor="#836a6ad9">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXButton fx:id="login" buttonType="RAISED" layoutX="71.0" layoutY="187.0" onAction="#handleLoginAction" prefHeight="25.0" prefWidth="103.0" ripplerFill="#5b8dc9" style="-fx-background-color: #0D47A1;" text="Кириш" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Label fx:id="label" layoutX="30.0" layoutY="158.0" prefHeight="19.0" prefWidth="195.0" textAlignment="CENTER" textFill="#ab241d">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#0000003c" />
+               </effect>
+            </Pane>
+            <Text id="textRandom" fx:id="hintText" cacheHint="SPEED" fill="#17157ad1" layoutX="20.0" layoutY="496.0" mouseTransparent="true" onMouseClicked="#handleTextAnimation" onTouchPressed="#handleTextAnimation" strokeLineCap="ROUND" strokeWidth="0.0" text="Text area" textAlignment="CENTER" wrappingWidth="305.13671875">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <effect>
+                  <Reflection fraction="0.67" topOpacity="0.27" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="S_RESIZE" />
+               </cursor>
+            </Text>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
