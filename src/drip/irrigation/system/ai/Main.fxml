@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="drip.irrigation.system.ai.MainController">
+    <children>
+        <TabPane layoutY="7.0" prefHeight="600.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Асосий ойна">
+                    <content>
+                        <AnchorPane prefHeight="573.0" prefWidth="900.0">
+                            <children>
+                                <AnchorPane prefHeight="228.0" prefWidth="891.0" />
+                                <Pane fx:id="navigatorPane" layoutX="368.0" layoutY="243.0" prefHeight="26.0" prefWidth="153.0">
+                                    <children>
+                                        <HBox fx:id="navigatorHorBox" prefHeight="28.0" prefWidth="176.0">
+                                            <children>
+                                                <JFXButton fx:id="one" buttonType="RAISED" graphicTextGap="2.0" onAction="#oneHandle" style="-fx-background-color: #42A5F5;">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" top="2.0" />
+                                                    </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="two" buttonType="RAISED" onAction="#twoHandle" ripplerFill="#4555bbd9" style="-fx-background-color: #42A5F5;">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" top="2.0" />
+                                                    </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton fx:id="tree" buttonType="RAISED" onAction="#threeHandle" ripplerFill="#4556bad8" style="-fx-background-color: #42A5F5;">
+                                                    <HBox.margin>
+                                                        <Insets left="5.0" top="2.0" />
+                                                    </HBox.margin>
+                                                </JFXButton>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </Pane>
+                                <Pane id="firstSlide" fx:id="onePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="900.0" style="-fx-background-color: #E91E63;" />
+                                <Pane id="secondSlide" fx:id="twoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="900.0" style="-fx-background-color: #D4E157;" />
+                                <Pane id="thirdSlide" fx:id="threePane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="900.0" style="-fx-background-color: #03A9F4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <ScrollPane layoutX="2.0" layoutY="277.0" prefHeight="664.0" prefViewportHeight="656.0" prefViewportWidth="876.0" prefWidth="891.0">
+                           <content>
+                              <HBox layoutX="15.0" layoutY="283.0" prefHeight="298.0" prefWidth="876.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <ImageView fitHeight="110.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@hone.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets top="25.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="237.0" text="Томчилаб сугориш" textAlignment="CENTER" textFill="#3958a1">
+                                             <effect>
+                                                <Reflection fraction="0.56" topOpacity="0.4" />
+                                             </effect>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="dripLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <ImageView fitHeight="100.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@htwo.jpg" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets top="25.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="237.0" text="Дастурий таминот " textAlignment="CENTER" textFill="#3958a1">
+                                             <effect>
+                                                <Reflection fraction="0.56" topOpacity="0.4" />
+                                             </effect>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="dnlab" strokeType="OUTSIDE" strokeWidth="0.0" />
+                                       </children>
+                                    </VBox>
+                                    <VBox alignment="TOP_CENTER" prefHeight="500.0" prefWidth="300.0" style="-fx-background-color: #FFFFFF;">
+                                       <children>
+                                          <ImageView fitHeight="118.0" fitWidth="146.0" pickOnBounds="true" smooth="false">
+                                             <image>
+                                                <Image url="@hthree.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets top="25.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="237.0" text="Фойда усиши" textAlignment="CENTER" textFill="#3958a1">
+                                             <effect>
+                                                <Reflection fraction="0.56" topOpacity="0.4" />
+                                             </effect>
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Text fx:id="foydaLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </content>
+                        </ScrollPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Бошкарув панели">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <GridPane id="gridPaneControl" layoutX="33.0" layoutY="15.0" prefHeight="560.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="628.6666870117188" minWidth="10.0" prefWidth="628.6666870117188" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="506.0" minWidth="10.0" prefWidth="271.33331298828125" />
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints maxHeight="115.0" minHeight="10.0" prefHeight="40.0" vgrow="NEVER" />
+                                        <RowConstraints maxHeight="262.0" minHeight="10.0" prefHeight="224.0" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="341.99998474121094" minHeight="10.0" prefHeight="307.0" vgrow="SOMETIMES" />
+                                    </rowConstraints>
+                                    <children>
+                                        <JFXToggleButton fx:id="aiToggleButton" onAction="#aIToggleHandle" prefHeight="56.0" prefWidth="270.0" style="-fx-background-color: #2196F3;" text="Автоматик бошкарувни учириш" textFill="WHITE" toggleColor="#89d313" toggleLineColor="#47bf67" GridPane.columnIndex="1">
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin></JFXToggleButton>
+                                        <Pane fx:id="controlPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #e5f5f8;" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                                            <children>
+                                                <GridPane layoutX="18.0" layoutY="2.0" prefHeight="215.0" prefWidth="862.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="212.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="267.6666259765625" minWidth="10.0" prefWidth="60.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="359.6666564941406" minWidth="10.0" prefWidth="157.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.0" minWidth="10.0" prefWidth="432.33331298828125" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="65.33334350585938" minHeight="10.0" prefHeight="45.33332824707031" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="94.66665649414062" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="129.66665649414062" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="129.66665649414062" minHeight="10.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="129.66665649414062" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <Label fx:id="zenHumidity" prefHeight="27.0" prefWidth="254.0" text="Усимлик илдизидаги намлик микдори" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                                                            <padding>
+                                                                <Insets bottom="5.0" top="5.0" />
+                                                            </padding>
+                                                        </Label>
+                                                        <ProgressBar fx:id="progressBarHumidity" prefWidth="200.0" progress="0.54" GridPane.rowIndex="4" />
+                                                        <Label prefHeight="17.0" prefWidth="295.0" text="Сув хажми метр куб/соатда" GridPane.columnIndex="3" />
+                                                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                            <children>
+                                                                <JFXToggleButton fx:id="wateringToggleButton" onAction="#wateringToggleHandle" prefHeight="35.0" prefWidth="123.0" text="Сугориш :" />
+                                                                <Label fx:id="wateringStatusLabel" prefHeight="54.0" prefWidth="152.0" />
+                                                            </children>
+                                                        </HBox>
+                                                        <Label prefHeight="17.0" prefWidth="110.0" text="Усимлик тури" GridPane.rowIndex="1" />
+                                                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                                            <children>
+                                                                <JFXComboBox fx:id="zenTypeComboBox" prefHeight="34.0" prefWidth="113.0" />
+                                                                <JFXButton fx:id="assignButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" onAction="#assignButtonHandle" prefHeight="29.0" prefWidth="79.0" style="-fx-background-color: #4CAF50;" text="Тасдиклаш" textFill="WHITE">
+                                                                    <HBox.margin>
+                                                                        <Insets left="15.0" top="15.0" />
+                                                                    </HBox.margin>
+                                                                </JFXButton>
+                                                            </children>
+                                                        </HBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                              <JFXComboBox fx:id="portComboBox" prefHeight="25.0" prefWidth="111.0" promptText="Алока Порти" />
+                                                              <JFXButton buttonType="RAISED" style="-fx-background-color: #2196F3;" text="Уланиш" textFill="#f9fbfc">
+                                                   <HBox.margin>
+                                                      <Insets left="25.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                          <JFXSlider fx:id="waterLevel" minorTickCount="5" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                          <Label fx:id="totalStatus" prefHeight="17.0" prefWidth="259.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                          <ProgressIndicator fx:id="progressBarIndicatorHumidity" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </Pane>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                <tabs>
+                                  <Tab text="Тупрокдаги намлик даражаси">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <LineChart fx:id="humidityChart" layoutX="119.0" layoutY="3.0" prefHeight="278.0" prefWidth="900.0" titleSide="BOTTOM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis fx:id="humCA" label="Соат" side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis fx:id="humNA" label="Намлик даражаси" side="LEFT" tickLabelFill="#010114" />
+                                                  </yAxis>
+                                                </LineChart>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                  <Tab text="Тупрокдаги темпратура даражаси">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <LineChart fx:id="tempChart" layoutX="-67.0" layoutY="-148.0" prefHeight="278.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </LineChart>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </Tab>
+                                    <Tab text="Екин майдони ёруглик даражаси">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <LineChart fx:id="lightChart" layoutX="-13.0" layoutY="-114.0" prefHeight="278.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                  <xAxis>
+                                                    <CategoryAxis side="BOTTOM" />
+                                                  </xAxis>
+                                                  <yAxis>
+                                                    <NumberAxis side="LEFT" />
+                                                  </yAxis>
+                                                </LineChart>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </Tab>
+                                </tabs>
+                              </TabPane>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="56.0" prefWidth="628.0" style="-fx-background-color: #2196F3;" text="АСОСИЙ БОШКАРУВ ПАНЕЛИ" textAlignment="CENTER" textFill="WHITE" textOverrun="WORD_ELLIPSIS">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                                 <effect>
+                                    <Reflection fraction="0.14" topOpacity="0.11" />
+                                 </effect>
+                              </Label>
+                                    </children>
+                                </GridPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Хисоботлар">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane id="hscreenpane" layoutX="3.0" prefHeight="240.0" prefWidth="900.0" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Об-хаво маьлумотлари">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane id="screenWeather" layoutX="-2.0" prefHeight="240.0" prefWidth="907.0" style="-fx-background-color: #2df200;" />
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Ёрдам">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Pane id="helpimage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="900.0" style="-fx-background-color: #80DEEA;" />
+                        <GridPane layoutX="8.0" layoutY="238.0" prefHeight="338.0" prefWidth="891.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="440.0" minWidth="10.0" prefWidth="128.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="772.0" minWidth="10.0" prefWidth="772.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bowqaruv panelidan foydalanish haqida malimotlar boladi " wrappingWidth="764.8033905029297" GridPane.columnIndex="1" />
+                              <Label prefHeight="62.0" prefWidth="128.0" text="Boshqaruv paneli " />
+                              <Label prefHeight="62.0" prefWidth="128.0" text="Xisobotlar paneli " GridPane.rowIndex="1" />
+                              <Label layoutX="10.0" layoutY="149.0" prefHeight="62.0" prefWidth="128.0" text="Ob havo malumotlari" GridPane.rowIndex="2" />
+                              <Text layoutX="133.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" panelidan foydalanish haqida malimotlar boladi " wrappingWidth="764.8033905029297" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Text layoutX="133.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="panelidan foydalanish haqida malimotlar boladi " wrappingWidth="764.8033905029297" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                           </children>
+                        </GridPane>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>

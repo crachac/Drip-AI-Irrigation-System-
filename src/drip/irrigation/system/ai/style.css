@@ -1,0 +1,39 @@
+#pane{
+    -fx-background-image: url("loginimage.jpg");
+    -fx-background-size: 900 600;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0); 
+}
+#logPane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 1, 1;
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+#firstSlide{
+    -fx-background-image: url("aiscreen.jpg");
+   
+}
+#secondSlide{
+    -fx-background-image: url("crscreen.jpg");
+   
+}
+#thirdSlide{
+ -fx-background-image: url("swscreen.jpg");
+}
+
+#gridPaneControl{
+   
+}#helpimage{
+     -fx-background-image: url("helpdes.jpg");
+}
+#conrolpaneback{
+     -fx-background-image: url("controlpane.jpg");
+}
+#screenWeather{
+     -fx-background-image: url("wscreen.jpg");
+}
+#hscreenpane{
+    -fx-background-image: url("hscreen.jpg");
+}
